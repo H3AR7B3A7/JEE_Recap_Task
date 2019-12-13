@@ -1,3 +1,7 @@
 .active{
     color: #3f3f3f !important;
 }
+
+button{
+    font-size: 2em !important;
+}
