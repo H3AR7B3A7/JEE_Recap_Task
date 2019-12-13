@@ -6,6 +6,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.math.BigDecimal;
 
+/**
+ * PRODUCT MODEL
+ *
+ * @author d.Dog
+ */
 @Entity
 public class Product {
     @Id
@@ -20,13 +25,9 @@ public class Product {
     public Product() {
     }
 
-    public BigDecimal getPrice() {
-        return price;
-    }
+    public BigDecimal getPrice() { return price; }
 
-    public void setPrice(BigDecimal price) {
-        this.price = price;
-    }
+    public void setPrice(BigDecimal price) { this.price = price; }
 
     public int getId() {
         return id;
