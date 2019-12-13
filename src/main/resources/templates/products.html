@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<!--  HEAD  -->
+<head th:replace="~{head::head}"></head>
+<!--  PAGE  -->
+<body>
+<div id="page-container">
+    <div id="content-wrap">
+        <!--  NAV  -->
+        <nav th:replace="~{nav::nav(products)}"></nav>
+        <!-- CONTENT  -->
+        <div class="container-fluid padding">
+            <div class="text-center padding">
+                <h1>Products</h1>
+            </div>
+            <div class="tableWrapper">
+                <table id="productTable">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Contact</th>
+                        <th>Mail</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="product : ${products}">
+                        <td th:text="${product.id}"></td>
+                        <td th:text="${product.productName}"></td>
+                        <td th:text="${product.description}"></td>
+                        <td th:text="${product.contact}"></td>
+                        <td th:text="${product.contactMail}"></td>
+                        <td><a th:href="@{~/products/{id}(id=${product.id})}">details</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--  FOOTER  -->
+    <footer th:replace="~{footer::footer}"></footer>
+</div>
+</body>
+</html>

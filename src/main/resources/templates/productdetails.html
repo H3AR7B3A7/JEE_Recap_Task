@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<!--  HEAD  -->
+<head th:replace="~{head::head}"></head>
+<!--  PAGE  -->
+<body>
+<div id="page-container">
+    <div id="content-wrap">
+        <!--  NAV  -->
+        <nav th:replace="~{nav::nav(products)}"></nav>
+        <!-- CONTENT  -->
+        <div class="container-fluid padding">
+            <div class="text-center padding">
+                <h1>Product Details</h1>
+            </div>
+            <table cellspacing="0" th:object="${product}">
+                <tr>
+                    <td>ID</td>
+                    <td th:text="*{id}"></td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td th:text="*{productName}"></td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td th:text="*{description}"></td>
+                </tr>
+                <tr>
+                    <td>Contact</td>
+                    <td th:text="*{contact}"></td>
+                </tr>
+                <tr>
+                    <td>Mail</td>
+                    <td th:text="*{contactMail}"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!--  FOOTER  -->
+    <footer th:replace="~{footer::footer}"></footer>
+</div>
+</body>
+</html>

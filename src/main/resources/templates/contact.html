@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<!--  HEAD  -->
+<head th:replace="~{head::head}"></head>
+<!--  PAGE  -->
+<body>
+<div id="page-container">
+    <div id="content-wrap">
+        <!--  NAV  -->
+        <nav th:replace="~{nav::nav(contact)}"></nav>
+        <!--  CONTENT  -->
+        <div class="container-fluid padding">
+            <div class="text-center padding">
+                <h1>Contact</h1>
+            </div>
+            <div class="row text-center padding">
+                <div class="col-12">
+                    <h2>Connect</h2>
+                </div>
+                <div class="col-12">
+                    Yar Pirate Ipsum
+                    Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone
+                    mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper
+                    chantey doubloon starboard grog black jack gangway rutters.
+                    Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors.
+                    Bring a spring upon her cable holystone blow the man down spanker Shiver me timbers to go on account
+                    lookout wherry doubloon chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet
+                    transom heave to.
+                </div>
+                <div class="col-12 social padding">
+                    <a href="#"><em class="fab fa-facebook"></em></a>
+                    <a href="#"><em class="fab fa-twitter"></em></a>
+                    <a href="#"><em class="fab fa-google-plus-g"></em></a>
+                    <a href="#"><em class="fab fa-instagram"></em></a>
+                    <a href="#"><em class="fab fa-youtube"></em></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  FOOTER  -->
+    <footer th:replace="~{footer::footer}"></footer>
+</div>
+</body>
+</html>
