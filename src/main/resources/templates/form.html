@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<!--  HEAD  -->
+<head th:replace="~{fragments/head::head}"></head>
+<!--  PAGE  -->
+<body>
+<div id="page-container">
+    <div id="content-wrap">
+        <!--  NAV  -->
+        <nav th:replace="~{fragments/nav::nav(products)}"></nav>
+        <!-- CONTENT  -->
+        <div class="container-fluid padding text-center">
+            <h1 th:text="#{form_title}"></h1>
+        </div>
+        <!--  FORM  -->
+        <div class="formWrapper container-fluid">
+            <h4 th:text="#{form_subtitle}"></h4>
+            <form th:action="@{~/products}" method="post" th:object="${nProduct}">
+                <div class="text-input">
+                    <label for="id" class="fieldLabel" th:text="#{lbl_id}"></label>
+                    <input th:field="*{id}" id="id">
+                    <span th:if="${#fields.hasErrors('id')}" th:errors="*{id}" class="error"></span>
+                </div>
+                <div class="text-input">
+                    <label for="productName" class="fieldLabel" th:text="#{lbl_productName}"></label>
+                    <input type="text" th:field="*{productName}" id="productName">
+                    <span th:if="${#fields.hasErrors('productName')}" th:errors="*{productName}" class="error"></span>
+                </div>
+                <div class="text-input">
+                    <label for="description" class="fieldLabel" th:text="#{lbl_description}"></label>
+                    <input type="text" th:field="*{description}" id="description">
+                    <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}" class="error"></span>
+                </div>
+                <div class="text-input">
+                    <label for="contact" class="fieldLabel" th:text="#{lbl_contact}"></label>
+                    <input th:field="*{contact}" id="contact">
+                    <span th:if="${#fields.hasErrors('contact')}" th:errors="*{contact}" class="error"></span>
+                </div>
+                <div class="text-input">
+                    <label for="price" class="fieldLabel" th:text="#{lbl_price}"></label>
+                    <input th:field="*{price}" id="price">
+                    <span th:if="${#fields.hasErrors('price')}" th:errors="*{price}" class="error"></span>
+                </div>
+                <div class="text-input">
+                    <label for="contactMail" class="fieldLabel" th:text="#{lbl_contactMail}"></label>
+                    <input th:field="*{contactMail}" id="contactMail">
+                    <span th:if="${#fields.hasErrors('contactMail')}" th:errors="*{contactMail}" class="error"></span>
+                </div>
+                <input type="submit" class="btn" th:value="#{btn_send}">
+            </form>
+        </div>
+    </div>
+    <!--  FOOTER  -->
+    <footer th:replace="~{fragments/footer::footer}"></footer>
+</div>
+</body>
+</html>
