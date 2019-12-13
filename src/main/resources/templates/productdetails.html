@@ -14,7 +14,7 @@
             <div class="text-center padding">
                 <h1>Product Details</h1>
             </div>
-            <table cellspacing="0" th:object="${product}">
+            <table th:object="${product}">
                 <tr>
                     <td>ID</td>
                     <td th:text="*{id}"></td>
@@ -22,6 +22,10 @@
                 <tr>
                     <td>Name</td>
                     <td th:text="*{productName}"></td>
+                </tr>
+                <tr>
+                    <td>Price</td>
+                    <td th:text="*{price}"></td>
                 </tr>
                 <tr>
                     <td>Description</td>

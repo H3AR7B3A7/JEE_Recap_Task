@@ -18,21 +18,15 @@
                 <table id="productTable">
                     <thead>
                     <tr>
-                        <th>Id</th>
                         <th>Name</th>
-                        <th>Description</th>
-                        <th>Contact</th>
-                        <th>Mail</th>
+                        <th>Price</th>
                         <th></th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr th:each="product : ${products}">
-                        <td th:text="${product.id}"></td>
                         <td th:text="${product.productName}"></td>
-                        <td th:text="${product.description}"></td>
-                        <td th:text="${product.contact}"></td>
-                        <td th:text="${product.contactMail}"></td>
+                        <td th:text="${product.price}"></td>
                         <td><a th:href="@{~/products/{id}(id=${product.id})}">details</a></td>
                     </tr>
                     </tbody>
