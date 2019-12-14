@@ -5,3 +5,13 @@
 button{
     font-size: 2em !important;
 }
+
+label{
+    width: 6rem;
+}
+
+.error{
+    color: red;
+    font-size: 1.1em;
+    font-weight: bolder;
+}

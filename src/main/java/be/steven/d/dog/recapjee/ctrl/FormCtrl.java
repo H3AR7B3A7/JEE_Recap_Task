@@ -31,7 +31,7 @@ public class FormCtrl {
     @PostMapping(value = "/products/form")
     public String saveProduct(@ModelAttribute("nProduct") @Valid Product nProduct, BindingResult bindingResult) {
         if (bindingResult.hasErrors())
-            return "products";
+            return "form";
         repo.save(nProduct);
         return "redirect:/products";
     }

@@ -16,12 +16,7 @@
         <!--  FORM  -->
         <div class="formWrapper container-fluid">
             <h4 th:text="#{form_subtitle}"></h4>
-            <form th:action="@{~/products}" method="post" th:object="${nProduct}">
-                <div class="text-input">
-                    <label for="id" class="fieldLabel" th:text="#{lbl_id}"></label>
-                    <input th:field="*{id}" id="id">
-                    <span th:if="${#fields.hasErrors('id')}" th:errors="*{id}" class="error"></span>
-                </div>
+            <form th:action="@{~/products/form}" method="post" th:object="${nProduct}">
                 <div class="text-input">
                     <label for="productName" class="fieldLabel" th:text="#{lbl_productName}"></label>
                     <input type="text" th:field="*{productName}" id="productName">
