@@ -38,3 +38,9 @@ td{
 
 
 }
+
+@media (max-width: 576px) {
+    .container-fluid h2{
+        font-size: 150%;
+    }
+}

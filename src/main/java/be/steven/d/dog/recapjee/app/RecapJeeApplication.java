@@ -12,7 +12,7 @@ import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 
 /**
  * THIRD HAND APPLICATION
- *
+ * @version 0.0.1
  * @author d.Dog
  */
 @SpringBootApplication
