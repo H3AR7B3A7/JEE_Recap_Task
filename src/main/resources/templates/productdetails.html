@@ -37,7 +37,7 @@
                 </tr>
                 <tr>
                     <td>Mail</td>
-                    <td th:text="*{contactMail}"></td>
+                    <td><a th:href="'mailto:'+*{contactMail}" th:text="*{contactMail}"></a></td>
                 </tr>
             </table>
         </div>

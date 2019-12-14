@@ -1,3 +1,7 @@
+body{
+
+}
+
 .active{
     color: #3f3f3f !important;
 }
@@ -6,7 +10,12 @@ button{
     font-size: 2em !important;
 }
 
-label{
+td{
+    width: 100%;
+    min-width: 100%;
+}
+
+.fieldLabel{
     width: 6rem;
 }
 
@@ -14,4 +23,18 @@ label{
     color: red;
     font-size: 1.1em;
     font-weight: bolder;
+}
+
+.text-input input{
+    width: 100%;
+}
+
+#page-container{
+
+
+}
+
+#content-wrap{
+
+
 }

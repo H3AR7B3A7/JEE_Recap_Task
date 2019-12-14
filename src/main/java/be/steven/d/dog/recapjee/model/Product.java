@@ -28,7 +28,7 @@ public class Product {
     @NotBlank(message = "{blank_error}")
     private String contact;
 
-    @Pattern(regexp = "/^[-!#-\\'*+\\\\/-9=?^-~]+(?:\\\\.[-!#-\\'*+\\\\/-9=?^-~]+)*@[-!#-\\'*+\\\\/-9=?^-~]+(?:\\\\.[-!#-\\'*+\\\\/-9=?^-~]+)+$/i",message = "{mail_error}")
+    @Pattern(regexp = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$",message = "{mail_error}")
     private String contactMail;
 
     @NotNull(message = "{blank_error}")
