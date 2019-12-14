@@ -29,6 +29,11 @@ td{
     width: 100%;
 }
 
+textarea{
+    line-height: 3rem;
+    width: 100%;
+}
+
 #page-container{
 
 

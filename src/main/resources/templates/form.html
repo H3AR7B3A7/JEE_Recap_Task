@@ -25,7 +25,7 @@
                 <div class="text-input">
                     <label for="description" class="fieldLabel" th:text="#{lbl_description}"></label>
                     <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}" class="error"></span>
-                    <input type="text" th:field="*{description}" id="description">
+                    <textarea th:field="*{description}" id="description"></textarea>
                 </div>
                 <div class="text-input">
                     <label for="contact" class="fieldLabel" th:text="#{lbl_contact}"></label>
