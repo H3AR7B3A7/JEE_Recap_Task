@@ -1,7 +1,7 @@
 # JEE_Recap_Task
 Derde Hands Webshop
 
-Author: dog.D.steven (H3AR7B3A7) 
+Author: dog.D.steven (H3AR7B3A7)<br>
 Property of: H3AR7B3A7
 
 This is a simple advertisement section to which one can add and remove adds, created using spring boot.
